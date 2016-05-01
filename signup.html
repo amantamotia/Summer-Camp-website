@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+
+
+
+
+<head>
+	<title>Sign-Up Form</title>
+
+	<meta http-equiv="content-type"
+		content="text/html;charset=utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/mycssfile.css" />
+		<link rel="stylesheet" type="text/css" href="css/signup.css" />
+<script type="text/javascript" src="http://jadran.sdsu.edu/jquery/jquery.js"></script>
+
+
+        <script type="text/javascript" src="js/signup.js"></script>
+</head>
+
+<body>
+   <!-- <div >-->
+   <div id="container">
+        <h1 id="head">Registration Form for Summer Camp</h1>
+
+		<form name="personal_info"
+        id= "personal_info_form"
+        enctype="multipart/form-data"
+        action="process_request.php "
+        method="post">
+        <div class="formData">
+				<fieldset class="program">
+					<legend>Program</legend>
+					<ul>
+      			<li><input type="checkbox" name="check_program[]" id="check_focus" value="1" /> Basketball Camp  &nbsp; <input type="checkbox" name="check_program[]" value="2" /> Baseball Camp <br></li>
+      			<li><input type="checkbox" name="check_program[]" value="3" /> Physical Training  &nbsp;<input type="checkbox" name="check_program[]" value="4" /> Band Camp<br></li>
+      			<li><input type="checkbox" name="check_program[]" value="5" /> Swimming &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input type="checkbox" name="check_program[]" value="6" /> Nature Discovery</li>
+        		</ul>
+        </fieldset>
+		<hr class="clear"/>
+				<fieldset class="parentInfo">
+					<legend>Parent Information</legend>
+					<ul>
+            <li><label >First Name<span>*</span></label>
+              <input type="text" name="parent_fname" size="25" class='required' /></li>
+            <li><label >Middle Name</label>
+              <input type="text" name="parent_mname" size="25" class='required' /></li>
+            <li><label >Last Name<span>*</span></label>
+              <input type="text" name="parent_lname"   size="25" class='required' /></li>
+            <li>
+              <label >Relationship to Child<span>*</span></label>
+
+               <input type="radio" name="relationship" value="father" > Father
+	 						<input type="radio" name="relationship" value="mother" /> Mother
+	 						<input type="radio" name="relationship" value="guardian" /> Guardian
+            </li>
+            <li><label >Address<span>*</span></label>
+              <input type="text" name="parent_address"  size="30" class='required'/></li>
+            <li><label >Address(optional)</label>
+              <input type="text" name="parent_address_1"  size="30" class='required'/></li>
+
+              <li><label >City<span>*</span></label>
+                <input type="text" name="parent_city"   size="25" class='required'/> </li>
+                <li><label >State<span>*</span></label>
+
+                  <input type="text" name="parent_state" size="3"> </li>
+                <li><label >Zipcode<span>*</span></label>
+                <input type="text" name="parent_zip"  size="5" maxlength="5" class='required'/>
+              </li>
+              <li><label >Cell Phone<span>*</span></label>
+                (<input type="text" name="parent_home_area_phone" size="3" maxlength="3" class='required'/>)  &nbsp;&nbsp;
+                <input type="text" name="parent_home_prefix_phone" size="3" maxlength="3" class='required' /> &nbsp;-&nbsp;
+                <input type="text" name="parent_h_phone" size="4" maxlength="4" class='required'/></li>
+              <li><label >Home Phone</label>
+                (<input type="text" name="parent_cell_area_phone" size="3" maxlength="3" class='required'/>)  &nbsp;&nbsp;
+                <input type="text" name="parent_cell_prefix_phone" size="3" maxlength="3" class='required'/> &nbsp;-&nbsp;
+                <input type="text" name="parent_c_phone" size="4" maxlength="4" class='required'/></li>
+              <li><label >Email<span>*</span></label>
+                <input type="text" name="parent_email"  size="15" class='required'/></li>
+            </ul>
+
+		</fieldset>
+
+		     <!--   <div id="message_line">&nbsp;</div>-->
+		<fieldset class="ChildlInfo">
+					<legend>Child Information</legend>
+					<ul>
+              <li><label >First Name<span>*</span></label>
+                <input type="text" name="child_fname" size="25" class='required'/></li>
+              <li><label >Middle Name</label>
+              <input type="text" name="child_mname" size="25" class='required'/></li>
+              <li><label >Last Name<span>*</span></label>
+                <input type="text" name="child_lname"  size="25" class='required'/></li>
+              <li><label >Nick-Name</label>
+                <input type="text" name="child_nickname" size="25" /></li>
+              <li><label >Gender<span>*</span></label>
+
+                  <input type="radio" name="gender" value="M" /> Male  &nbsp;
+                  <input type="radio" name="gender" value="F" />  Female
+
+
+                </li>
+
+
+              <li><label>Date of Birth<span>*</span></label>
+			  <input type="text" name="dd" placeholder="dd" id="dd" size="3" maxlength="2" > /
+							<input type="text" name="mm" placeholder="mm" id="mm" size="3" maxlength="2" > /
+							<input type="text" name="yyyy" placeholder="yyyy" id="yyyy" size="5" maxlength="4" >
+			  </li>
+
+              <li><div class="center_upload">
+              <p><label>Image of Child<span>*</span></label></p>
+
+              </div>
+              <input class="center_upload" type="file" id="profile_image" name="pic" accept="image/*" /></li>
+
+              <li><label > Medical Conditions:</label>
+                <textarea rows="4" cols="20"  name="medical" form="personal_info_form"> </textarea></li>
+              <li><label>Dietary Requirements:</label>
+                <textarea rows="4" cols="20"   name="diet" form="personal_info_form"> </textarea></li>
+            </ul>
+
+		  </fieldset>
+
+		  <hr class="clear"/>
+				<fieldset class="Emergency">
+					<legend>Emergency Information</legend>
+
+            <ul>
+              <li><label>First Name<span>*</span></label>
+                <input type="text" name="emergency_fname" size="25" class='required'/></li>
+              <li><label >Last Name<span>*</span></label>
+                <input type="text" name="emergency_lname"   size="25" class='required'/></li>
+              <li><label>Phone<span>*</span></label>
+                (<input type="text" name="emergency_area_phone" size="3" maxlength="3" class='required'/>)  &nbsp;&nbsp;
+                <input type="text" name="emergency_prefix_phone" size="3" maxlength="3" class='required'/> &nbsp;-&nbsp;
+                <input type="text" name="phone_emergency" size="4" maxlength="4" class='required'/></li>
+            </ul>
+
+
+        </fieldset>
+
+
+     </div>
+
+
+	<div class="clear"></div>
+	 <div id="message_line">&nbsp;</div>
+
+		<div id="status"></div>
+
+        <fieldset>
+            <input type="reset" value="Clear Data" class="button"  id="reset_button"/>
+            <input type="button" value="Submit Data"  class="button" id="send_data" /><br /><br />
+		</fieldset>
+			<p ><a href="index.html" id="home_link">Go  Home</a></p>
+        </div>
+        </form>
+        </div>
+
+    <!--</div>-->
+
+</body>
+
+
+</html>
