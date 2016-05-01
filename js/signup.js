@@ -1,6 +1,7 @@
 
 
     function isEmpty(fieldValue) {
+        //This trims the value of the field.
         return $.trim(fieldValue).length == 0;
         }
 
